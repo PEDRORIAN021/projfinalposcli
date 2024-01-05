@@ -2,8 +2,13 @@
 
 {%block content %}
 <form action="{{ url_for('create') }}" method="post">
-    Nome: <input type="text" name="user_name"><br>
-    Email: <input type="email" name="user_email"><br>
+    Nome: <input type="text" name="name"><br>
+    Username: <input type="text" name="username"><br>
+    Email: <input type="email" name="email"><br>
+    Endereço: <input type="text" name="address"><br>
+    Telefone: <input type="text" name="phone"><br>
+    Site: <input type="text" name="website"><br>
+    Empresa: <input type="text" name="company"><br>
     <input type="submit" value="Submit">
 </form>
 {% endblock %}

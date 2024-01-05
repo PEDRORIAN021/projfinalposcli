@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block content %}
     {% for user in users %}
     <p><a href="/user/{{ user["id"] }}">{{ user["name"] }}</a>  <p>

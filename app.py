@@ -13,6 +13,11 @@ def index():
 def user(user_id):
     return render_template('user.html', user_data=user_api.read(user_id))
 
+@app.route('/user/<int:user_id>/delete')
+def remove(user_id):
+    user.api.delete(user_id)
+    return render_template('index.html', users=user_api.list())
+
 @app.route('/user/create', methods=['GET','POST'])
 def create():
     if request.method == 'POST':

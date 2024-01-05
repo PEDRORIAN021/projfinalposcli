@@ -29,7 +29,7 @@ class Users:
         url = self.base_url+str(user_id)
         response = requests.delete(url)
 
-        if response.status_code == 200:
+        if response.status_code == 204:
             return response.json()
         else:
             raise ValueError("ID inválido")

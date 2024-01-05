@@ -6,7 +6,7 @@
     {% for field in user_data %}
 
     <p> <b>{{ field }}</b>: {{ user_data[field] }} </p>
-
+    <a href="/user"/{{ user_data["id"] }}/delete">Remover Usuário</a>
     {% endfor %}
 
 {% endblock %}
